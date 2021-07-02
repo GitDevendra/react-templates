@@ -1,8 +1,7 @@
-import Styles from "./appStyle.module.scss";
-import Counter from "./counter";
+import Styles from './appStyle.module.scss'
+import Counter from './counter'
 
 const App = () => {
-  // const dev = "";
   return (
     <>
       <div className="wrapper">
@@ -13,7 +12,7 @@ const App = () => {
         </h1>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
