@@ -7,7 +7,7 @@ const App = () => {
     <>
       <div className="wrapper">
         <h1 className={Styles.heading}>
-          Hello! Dev Singh New <span> {process.env.NODE_ENV} </span>
+          Nothing to commit <span> {process.env.NODE_ENV} </span>
           {process.env.name}
           <br />
           <img src={codeIcon} alt="code" width="200" />
