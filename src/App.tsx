@@ -1,19 +1,22 @@
+import { useEffect, useState } from 'react'
 import Styles from './appStyle.module.scss'
-import Counter from './counter'
-import codeIcon from './assets/images/code.svg'
 
-const App = () => {
+const App: React.FunctionComponent = () => {
+  const [list, setList] = useState([])
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then((response) => response.json())
+      .then((json) => setList(json))
+  }, [])
+  console.log(list)
   return (
     <>
-      <div className="wrapper">
-        <h1 className={Styles.heading}>
-          Nothing to commit <span> {process.env.NODE_ENV} </span>
-          {process.env.name}
-          <br />
-          <img src={codeIcon} alt="code" width="200" />
-          <br />
-          <Counter className={Styles.counter} name="Click Me" />
-        </h1>
+      <div className={`${Styles.container}`}>
+        <ul>
+          {list.map((item) => {
+            return <li key={item.id}>{item.name}</li>
+          })}
+        </ul>
       </div>
     </>
   )
