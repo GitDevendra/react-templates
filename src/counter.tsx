@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react'
 
 interface IProps {
   className: string
+  name: string
 }
 
-const Counter: React.FunctionComponent<IProps> = ({ className }) => {
+const Counter: React.FunctionComponent<IProps> = ({ className, name }) => {
   const [counter, setCounter] = useState(0)
   const onclick = () => {
     setCounter(counter + 1)
@@ -15,7 +16,7 @@ const Counter: React.FunctionComponent<IProps> = ({ className }) => {
   return (
     <>
       <button className={className} onClick={onclick}>
-        Click {counter}
+        {name} {counter}
       </button>
     </>
   )

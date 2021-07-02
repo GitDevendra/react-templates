@@ -1,8 +1,12 @@
 .heading {
   color: black;
   padding: 10px 0px;
+  text-align: center;
+  span {
+    color: red;
+  }
   .counter {
-    background: red;
+    background: black;
     padding: 10px;
     color: #fff;
     border: none;
