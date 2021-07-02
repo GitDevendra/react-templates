@@ -13,7 +13,7 @@ const App: React.FunctionComponent = () => {
     <>
       <div className={`${Styles.container}`}>
         <ul>
-          {list.map((item) => {
+          {list.map((item: any) => {
             return <li key={item.id}>{item.name}</li>
           })}
         </ul>
