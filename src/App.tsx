@@ -13,7 +13,7 @@ const App: React.FunctionComponent<IProps> = ({ style }) => {
     <>
       <div className="wrapper" style={style}>
         <h1 className={Styles.heading}>
-          Hello! <span> {process.env.NODE_ENV} environment </span>
+          Hello <span> {process.env.NODE_ENV} environment </span>
           and my name is {process.env.name}
           <br />
           <img src={codeIcon} alt="code" width="200" />
