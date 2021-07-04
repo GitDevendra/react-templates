@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Styles from './counter.module.scss'
 
 interface IProps {
   className: string
@@ -15,7 +16,7 @@ const Counter: React.FunctionComponent<IProps> = ({ className, name }) => {
   }, [counter])
   return (
     <>
-      <button className={className} onClick={onclick}>
+      <button className={` ${Styles.counter} ${className}`} onClick={onclick}>
         {name} {counter}
       </button>
     </>

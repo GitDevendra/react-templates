@@ -2,4 +2,8 @@ import ReactDom from 'react-dom'
 import './style.scss'
 import App from './App'
 
-ReactDom.render(<App />, document.getElementById('root'))
+const applyStyle = {
+  margin: '20px auto',
+}
+
+ReactDom.render(<App style={applyStyle} />, document.getElementById('root'))
